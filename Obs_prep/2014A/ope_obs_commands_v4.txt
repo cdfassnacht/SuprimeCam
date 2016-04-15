@@ -1,0 +1,38 @@
+# Move to new object and focus (Std0924)
+SetupField $DEF_IMAGE $Std0924 OFFSET_RA=0 OFFSET_DEC=0 Filter="W-S-I+"
+FOCUSOBE $DEF_IMAGE $Std0924 EXPTIME=10 Z=7.10 DELTA_Z=0.05 DELTA_DEC=5 Filter="W-S-I+"
+
+# Take deeper exposures in i to use for photo-z determination (Std0924)
+SetupField $DEF_IMAGE $Std0924 OFFSET_RA=0 OFFSET_DEC=0 Filter="W-S-I+"
+GetObject $DEF_IMAGE $Std0924 EXPTIME=30 OFFSET_RA=0 OFFSET_DEC=0 Filter="W-S-I+"
+SetupField $DEF_IMAGE $Std0924 OFFSET_RA=17 OFFSET_DEC=-46 Filter="W-S-I+"
+GetObject $DEF_IMAGE $Std0924 EXPTIME=30 OFFSET_RA=17 OFFSET_DEC=-46 Filter="W-S-I+"
+SetupField $DEF_IMAGE $Std0924 OFFSET_RA=34 OFFSET_DEC=23 Filter="W-S-I+"
+GetObject $DEF_IMAGE $Std0924 EXPTIME=30 OFFSET_RA=34 OFFSET_DEC=23 Filter="W-S-I+"
+
+# Change filter to r and focus (Std0924)
+FilterChange $DEF_SPCAM Filter="W-S-R+"
+SetupField $DEF_IMAGE $Std0924 OFFSET_RA=0 OFFSET_DEC=0 Filter="W-S-R+"
+FOCUSOBE $DEF_IMAGE $Std0924 EXPTIME=10 Z=7.10 DELTA_Z=0.05 DELTA_DEC=5 Filter="W-S-R+"
+
+# Take deeper exposures in r to use for photo-z determination (Std0924)
+SetupField $DEF_IMAGE $Std0924 OFFSET_RA=0 OFFSET_DEC=0 Filter="W-S-R+"
+GetObject $DEF_IMAGE $Std0924 EXPTIME=30 OFFSET_RA=0 OFFSET_DEC=0 Filter="W-S-R+"
+SetupField $DEF_IMAGE $Std0924 OFFSET_RA=17 OFFSET_DEC=-46 Filter="W-S-R+"
+GetObject $DEF_IMAGE $Std0924 EXPTIME=30 OFFSET_RA=17 OFFSET_DEC=-46 Filter="W-S-R+"
+SetupField $DEF_IMAGE $Std0924 OFFSET_RA=34 OFFSET_DEC=23 Filter="W-S-R+"
+GetObject $DEF_IMAGE $Std0924 EXPTIME=30 OFFSET_RA=34 OFFSET_DEC=23 Filter="W-S-R+"
+
+# Change filter to g and focus (Std0924)
+FilterChange $DEF_SPCAM Filter="W-S-G+"
+SetupField $DEF_IMAGE $Std0924 OFFSET_RA=0 OFFSET_DEC=0 Filter="W-S-G+"
+FOCUSOBE $DEF_IMAGE $Std0924 EXPTIME=10 Z=7.10 DELTA_Z=0.05 DELTA_DEC=5 Filter="W-S-G+"
+
+# Take deeper exposures in g to use for photo-z determination (Std0924)
+SetupField $DEF_IMAGE $Std0924 OFFSET_RA=0 OFFSET_DEC=0 Filter="W-S-G+"
+GetObject $DEF_IMAGE $Std0924 EXPTIME=30 OFFSET_RA=0 OFFSET_DEC=0 Filter="W-S-G+"
+SetupField $DEF_IMAGE $Std0924 OFFSET_RA=17 OFFSET_DEC=-46 Filter="W-S-G+"
+GetObject $DEF_IMAGE $Std0924 EXPTIME=30 OFFSET_RA=17 OFFSET_DEC=-46 Filter="W-S-G+"
+SetupField $DEF_IMAGE $Std0924 OFFSET_RA=34 OFFSET_DEC=23 Filter="W-S-G+"
+GetObject $DEF_IMAGE $Std0924 EXPTIME=30 OFFSET_RA=34 OFFSET_DEC=23 Filter="W-S-G+"
+
